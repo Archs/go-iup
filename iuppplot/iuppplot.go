@@ -6,7 +6,7 @@ package iuppplot
 
 /*
 #cgo CFLAGS : -I../../libs/iup/include
-#cgo LDFLAGS: -L../../libs/iup -liup -liup_pplot
+#cgo LDFLAGS: -L../../libs/iup -liup-aio
 #cgo linux CFLAGS : -I../../libs/cd/include
 #cgo linux LDFLAGS: -L../../libs/cd -liupcd -lcd
 #include <stdlib.h>
@@ -15,7 +15,7 @@ package iuppplot
 */
 import "C"
 import "unsafe"
-import "github.com/visualfc/go-iup/iup"
+import "github.com/Archs/go-iup/iup"
 
 func toNative(h iup.IHandle) *C.Ihandle {
 	return (*C.Ihandle)(unsafe.Pointer(h.Native()))

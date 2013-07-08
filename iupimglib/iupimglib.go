@@ -6,13 +6,13 @@ package iupimglib
 
 /*
 #cgo CFLAGS : -I../../libs/iup/include
-#cgo LDFLAGS: -L../../libs/iup -liup -liupimglib
+#cgo LDFLAGS: -L../../libs/iup -liup-aio
 
 #include <stdlib.h>
 #include <iup.h>
 */
 import "C"
-import "github.com/visualfc/go-iup/iup"
+import "github.com/Archs/go-iup/iup"
 
 func Open() *iup.Error {
 	C.IupImageLibOpen()

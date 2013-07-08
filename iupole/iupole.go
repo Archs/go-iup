@@ -6,14 +6,14 @@ package iupole
 
 /*
 #cgo CFLAGS : -I../../libs/iup/include
-#cgo LDFLAGS: -L../../libs/iup -liup -liupole
+#cgo LDFLAGS: -L../../libs/iup -liup-aio
 
 #include <stdlib.h>
 #include <iup.h>
 #include <iupole.h>
 */
 import "C"
-import "github.com/visualfc/go-iup/iup"
+import "github.com/Archs/go-iup/iup"
 
 func Open() *iup.Error {
 	r := C.IupOleControlOpen()

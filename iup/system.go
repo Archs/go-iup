@@ -5,8 +5,7 @@
 package iup
 
 /*
-#cgo CFLAGS : -I../../libs/iup/include
-#cgo LDFLAGS: -L../../libs/iup -liup
+#cgo LDFLAGS: -liup-aio
 #include <iup.h>
 */
 import "C"

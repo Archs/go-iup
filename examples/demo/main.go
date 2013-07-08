@@ -6,11 +6,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/visualfc/go-iup/iup"
-	"github.com/visualfc/go-iup/iupctls"
-	"github.com/visualfc/go-iup/iupim"
-	"github.com/visualfc/go-iup/iupimglib"
-	"github.com/visualfc/go-iup/iuppplot"
+	"github.com/Archs/go-iup/iup"
+	"github.com/Archs/go-iup/iupctls"
+	"github.com/Archs/go-iup/iupim"
+	"github.com/Archs/go-iup/iupimglib"
+	"github.com/Archs/go-iup/iuppplot"
 )
 
 func main() {

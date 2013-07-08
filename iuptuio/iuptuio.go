@@ -1,18 +1,19 @@
 // Copyright (C) 2011 visualfc. All rights reserved.
 // Use of this source code is governed by a MIT license 
 // that can be found in the COPYRIGHT file.
+// +build ignore
 
 package iuptuio
 
 /*
 #cgo CFLAGS : -I../../libs/iup/include
-#cgo LDFLAGS: -L../../libs/iup -liup -liuptuio
+#cgo LDFLAGS: -L../../libs/iup -liup-aio
 #include <stdlib.h>
 #include <iup.h>
 #include <iuptuio.h>
 */
 import "C"
-import "github.com/visualfc/go-iup/iup"
+import "github.com/Archs/go-iup/iup"
 
 func Open() *iup.Error {
 	r := C.IupTuioOpen()

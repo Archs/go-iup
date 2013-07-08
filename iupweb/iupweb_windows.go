@@ -1,11 +1,12 @@
 // Copyright (C) 2011-2012 visualfc. All rights reserved.
 // Use of this source code is governed by a MIT license 
 // that can be found in the COPYRIGHT file.
+// +build ignore
 
 package iupweb
 
 import (
-	"github.com/visualfc/go-iup/iup"
+	"github.com/Archs/go-iup/iup"
 	"syscall"
 )
 

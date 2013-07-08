@@ -6,14 +6,14 @@ package iupim
 
 /*
 #cgo CFLAGS : -I../../libs/iup/include
-#cgo LDFLAGS : -L../../libs/iup -liup -liupim
+#cgo LDFLAGS : -L../../libs/iup -liup-aio
 #cgo linux CFLAGS : -I../../libs/im/include
 #cgo linux LDFLAGS : -L../../libs/im -lim
 #include <iup.h>
 #include <iupim.h>
 */
 import "C"
-import "github.com/visualfc/go-iup/iup"
+import "github.com/Archs/go-iup/iup"
 
 func LoadImage(filename string) *iup.Handle {
 	cname := iup.NewCS(filename)

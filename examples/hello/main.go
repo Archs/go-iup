@@ -6,7 +6,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/visualfc/go-iup/iup"
+	"github.com/Archs/go-iup/iup"
 )
 
 func main() {
