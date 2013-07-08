@@ -1,6 +1,6 @@
 #GO-IUP
 
-This project is forked from [visualfc's GO-IUP](https://github.com/visualfc/go-iup) to use [iup-aio][] build of iup Golang buildings.
+This project is forked from [visualfc's GO-IUP](https://github.com/visualfc/go-iup) to use [iup-aio][] to build the iup Golang buildings.
 
 ## Now supports:
 1. iup
