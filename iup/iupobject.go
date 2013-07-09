@@ -1,5 +1,5 @@
 // Copyright (C) 2011-2012 visualfc. All rights reserved.
-// Use of this source code is governed by a MIT license 
+// Use of this source code is governed by a MIT license
 // that can be found in the COPYRIGHT file.
 
 // gencb.lua
@@ -916,63 +916,63 @@ func FontDlg(a ...interface{}) *Handle {
 
 // Iup control Fill
 //
-// 
+//
 func Fill(a ...interface{}) *Handle {
 	return New(FILL, a...)
 }
 
 // Iup control Hbox
 //
-// 
+//
 func Hbox(a ...interface{}) *Handle {
 	return New(HBOX, a...)
 }
 
 // Iup control Vbox
 //
-// 
+//
 func Vbox(a ...interface{}) *Handle {
 	return New(VBOX, a...)
 }
 
 // Iup control Zbox
 //
-// 
+//
 func Zbox(a ...interface{}) *Handle {
 	return New(ZBOX, a...)
 }
 
 // Iup control Radio
 //
-// 
+//
 func Radio(a ...interface{}) *Handle {
 	return New(RADIO, a...)
 }
 
 // Iup control Normalizer
 //
-// 
+//
 func Normalizer(a ...interface{}) *Handle {
 	return New(NORMALIZER, a...)
 }
 
 // Iup control Cbox
 //
-// 
+//
 func Cbox(a ...interface{}) *Handle {
 	return New(CBOX, a...)
 }
 
 // Iup control Sbox
 //
-// 
+//
 func Sbox(a ...interface{}) *Handle {
 	return New(SBOX, a...)
 }
 
 // Iup control Split
 //
-// 
+//
 func Split(a ...interface{}) *Handle {
 	return New(SPLIT, a...)
 }
@@ -1007,7 +1007,7 @@ func Menu(a ...interface{}) *Handle {
 
 // Iup control Separator
 //
-// 
+//
 func Separator(a ...interface{}) *Handle {
 	return New(SEPARATOR, a...)
 }
@@ -1025,7 +1025,7 @@ func SubMenu(a ...interface{}) *Handle {
 
 // Iup control Clipboard
 //
-// 
+//
 func Clipboard(a ...interface{}) *Handle {
 	return New(CLIPBOARD, a...)
 }
@@ -1039,7 +1039,7 @@ func Timer(a ...interface{}) *Handle {
 
 // Iup control User
 //
-// 
+//
 func User(a ...interface{}) *Handle {
 	return New(USER, a...)
 }
@@ -2917,6 +2917,10 @@ func canvas_SetCallback(h *Handle, fn interface{}) bool {
 		return common_SetCallback(h, fn)
 	}
 	return true
+}
+
+func Canvas_SetCallback(h *Handle, fn interface{}) bool {
+	return canvas_SetCallback(h, fn)
 }
 
 func frame_SetCallback(h *Handle, fn interface{}) bool {
