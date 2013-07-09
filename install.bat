@@ -1,7 +1,15 @@
-rem Please set IUP_HOME first
+@rem Please set IUP_HOME first
+@rem 
+@echo Setting CGO flags ...
 
-set CGO_CFLAGS=-I%IUP_HOME%\include
-set CGO_LDFLAGS=-L%IUP_HOME%
-path=%IUP_HOME%;%path%
+@set CGO_CFLAGS=-I%IUP_HOME%\include
+@set CGO_LDFLAGS=-L%IUP_HOME%
+@path=%IUP_HOME%;%path%
 
-go install -x github.com/Archs/go-iup...
+@echo Do buildings ...
+
+@go install -x github.com/Archs/go-iup...
+
+@echo Build Done
+
+@pause
