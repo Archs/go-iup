@@ -40,17 +40,17 @@ const (
 	GLCANVAS = "glcanvas"
 )
 
+func GLCanvas(a ...interface{}) *iup.Handle {
+	return iup.New(GLCANVAS, a...)
+}
+
 func GLCanvasOpen() *iup.Error {
 	C.IupGLCanvasOpen()
 	return nil
 }
 
-func toNative(h iup.IHandle) *C.Ihandle {
+func toNative(h *iup.Handle) *C.Ihandle {
 	return (*C.Ihandle)(unsafe.Pointer(h.Native()))
-}
-
-func GlCanvas(a ...interface{}) *iup.Handle {
-	return iup.New(GLCANVAS, a...)
 }
 
 func GLMakeCurrent(ih *iup.Handle) {
