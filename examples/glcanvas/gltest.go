@@ -5,8 +5,8 @@ import (
 	"github.com/Archs/go-iup/iup"
 	"github.com/Archs/go-iup/iupctls"
 	"github.com/Archs/go-iup/iupglcanvas"
-	gl "github.com/chsc/gogl/gl21"
-	"os"
+	"github.com/go-gl/gl"
+	// "os"
 )
 
 const (
@@ -20,8 +20,6 @@ func main() {
 	iupctls.Open()
 	iupglcanvas.GLCanvasOpen()
 
-	// iupglcanvas.GLMakeCurrent(canvas)
-
 	canvas := iupglcanvas.GLCanvas("RASTERSIZE=640x480",
 		"BUFFER=DOUBLE",
 		redraw)
@@ -31,27 +29,14 @@ func main() {
 		return
 	}
 
-	// iup.SetCallback(canvas, "ACTION", (Icallback) redraw)
-	// iup.SetAttribute(canvas, iup._BUFFER, iup._DOUBLE)
-	// iup.SetAttribute(canvas, )
-
-	finale := iup.Hbox(
+	finale := iup.Vbox(
 		canvas,
-		iup.Text("Welcome to GL world!"),
 	)
 
 	dg := iup.Dialog(finale)
-	dg.SetAttribute("TITLE", "iup.GLCanvas")
+	dg.SetAttribute("TITLE", "Welcom to the GL world!")
 
 	dg.Show()
-	iup.LoopStep()
-
-	if err := gl.Init(); err != nil {
-		fmt.Fprintf(os.Stderr, "gl: %s\n", err.Error())
-		return
-	}
-
-	println("begin mainloop")
 	iup.MainLoop()
 	return
 }
@@ -65,15 +50,17 @@ func redraw(arg *iup.CanvasAction) {
 
 	iupglcanvas.GLMakeCurrent(arg.Sender)
 
-	gl.Viewport(0, 0, gl.Sizei(w), gl.Sizei(h))
-	gl.ClearColor(1.0, 1.0, 1.0, 1.0)
+	gl.Viewport(0, 0, w, h)
+	// black out
+	gl.ClearColor(0.0, 0.0, 0.0, 1.0)
 	gl.Clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
-	gl.Color3f(1.0, 0.0, 0.0)
-	gl.Begin(gl.QUADS)
+	// set color
+	gl.Color3f(1.0, 1.0, 0.0)
+	// draw a triangle
+	gl.Begin(gl.TRIANGLES)
 	gl.Vertex2f(0.9, 0.9)
 	gl.Vertex2f(0.9, -0.9)
 	gl.Vertex2f(-0.9, -0.9)
-	gl.Vertex2f(-0.9, 0.9)
 	gl.End()
 
 	iupglcanvas.GLSwapBuffers(arg.Sender)
