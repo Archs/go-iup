@@ -6,8 +6,9 @@ This project is forked from [visualfc's GO-IUP](https://github.com/visualfc/go-i
 1. iup
 2. iup controls
 3. iup imglib
-4. iupole
-5. iuppplot
+4. iup ole
+5. iup pplot
+6. iup glcanvas
 
 ## Installation
 1. Install [iup-aio][] first, to build a all-in-one version for iup in Widnows
