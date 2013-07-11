@@ -1,12 +1,12 @@
 // Copyright (C) 2011-2012 visualfc. All rights reserved.
-// Use of this source code is governed by a MIT license 
+// Use of this source code is governed by a MIT license
 // that can be found in the COPYRIGHT file.
 
 package iuppplot
 
 /*
 #cgo CFLAGS : -I../../libs/iup/include
-#cgo LDFLAGS: -L../../libs/iup -liup-aio
+#cgo LDFLAGS: -L../../libs/iup -laiox
 #cgo linux CFLAGS : -I../../libs/cd/include
 #cgo linux LDFLAGS: -L../../libs/cd -liupcd -lcd
 #include <stdlib.h>

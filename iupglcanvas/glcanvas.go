@@ -20,7 +20,7 @@
 package iupglcanvas
 
 /*
-#cgo LDFLAGS: -liup-aio
+#cgo LDFLAGS: -laiox
 #cgo linux LDFLAGS: -liupgtk
 #cgo windows LDFLAGS: -lgdi32 -lole32 -lcomdlg32 -lcomctl32  -lopengl32
 

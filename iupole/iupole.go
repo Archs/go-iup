@@ -6,7 +6,7 @@ package iupole
 
 /*
 #cgo CFLAGS : -I../../libs/iup/include
-#cgo LDFLAGS: -L../../libs/iup -liup-aio
+#cgo LDFLAGS: -L../../libs/iup -laiox
 
 #include <stdlib.h>
 #include <iup.h>
