@@ -1,5 +1,5 @@
 // Copyright (C) 2011-2012 visualfc. All rights reserved.
-// Use of this source code is governed by a MIT license 
+// Use of this source code is governed by a MIT license
 // that can be found in the COPYRIGHT file.
 
 package iup
@@ -165,7 +165,12 @@ type IHandle interface {
 var handleMap = make(map[uintptr]IHandle)
 
 func toHandle(native *C.Ihandle) IHandle {
-	return handleMap[uintptr(unsafe.Pointer(native))]
+	ih := handleMap[uintptr(unsafe.Pointer(native))]
+	// in case of the handle is not craeted in Go
+	if ih == nil {
+		ih = NewHandle(native)
+	}
+	return ih
 }
 
 func ptoHandle(native unsafe.Pointer) IHandle {
