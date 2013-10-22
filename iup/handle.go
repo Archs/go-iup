@@ -466,6 +466,7 @@ func (h *Handle) GetAttributeId(name string, id int) string {
 func (h *Handle) SetAttributes(values string) {
 	cvalues := NewCS(values)
 	defer FreeCS(cvalues)
+	// println("seting", values)
 	C.IupSetAttributes(h.p, cvalues)
 }
 
